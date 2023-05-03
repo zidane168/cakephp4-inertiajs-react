@@ -1,0 +1,5 @@
+- npm run dev <- rebuild when any change from assets folder
+- bin/cake server
+
+- build control xen ke voi react / cakephp 4 
+(behavior: 1 cái page edit trong mot cái module có controller phúc tap, như combox, thay vì dùng cakephp controll, mình dùng react control nhu sau)
