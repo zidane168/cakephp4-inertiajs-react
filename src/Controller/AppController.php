@@ -37,9 +37,13 @@ class AppController extends Controller
 
     public function beforeRender(EventInterface $event) {
 
-        if ($event->getSubject()->getRequest()->getParam('action') !== 'getNumber') {
+        if ( !in_array($event->getSubject()->getRequest()->getParam('action'), ['getNumber']) ) {            
             $this->inertiaBeforeRender($event);
         }
+        
+        // if ($event->getSubject()->getRequest()->getParam('action') !== 'getNumber') {
+        //     $this->inertiaBeforeRender($event);
+        // }
     }
 
     /**
