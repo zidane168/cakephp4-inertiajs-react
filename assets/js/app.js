@@ -15,8 +15,9 @@ if (!el) {
 }
 
 createInertiaApp({
-    // turn progress indicator off by seting this to false
-    progress: true,
+    // turn progress indicator off by setting this to false
+    progress: false,
+
     resolve: name => require(`./Pages/${name}`),
     setup({ el, App, props }) {
         createRoot(el).render(<App {...props} />)

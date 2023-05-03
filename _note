@@ -1,4 +1,4 @@
-- npm run dev <- rebuild when any change from assets folder
+- npm run dev / npm run watch <- rebuild when any change from assets folder
 - bin/cake server
 
 - build control xen ke voi react / cakephp 4 
