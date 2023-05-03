@@ -17,6 +17,7 @@ declare(strict_types=1);
 namespace App\Controller;
 
 use Cake\Controller\Controller;
+use Cake\Event\EventInterface;
 use Inertia\Controller\InertiaResponseTrait;
 
 /**
@@ -30,7 +31,17 @@ use Inertia\Controller\InertiaResponseTrait;
 class AppController extends Controller
 {
 
-    use InertiaResponseTrait;
+    use InertiaResponseTrait {
+        beforeRender as protected inertiaBeforeRender;
+    }
+
+    public function beforeRender(EventInterface $event) {
+
+        if ($event->getSubject()->getRequest()->getParam('action') !== 'getNumber') {
+            $this->inertiaBeforeRender($event);
+        }
+    }
+
     /**
      * Initialization hook method.
      *

@@ -6,6 +6,8 @@ import { createRoot } from 'react-dom/client'
 // Setup CSRF tokens.
 axios.defaults.xsrfCookieName = 'csrfToken';
 axios.defaults.xsrfHeaderName = 'X-Csrf-Token';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 const el = document.getElementById('app');
 if (!el) {
